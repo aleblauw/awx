@@ -1,0 +1,3 @@
+- import_playbook: install_ansible.yml
+- import_playbook: install_docker.yml
+- import_playbook: install_awx.yml
