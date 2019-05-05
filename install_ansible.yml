@@ -1,20 +1,26 @@
-- name: Add repository
-  yum_repository:
-    name: epel
-    description: EPEL YUM repo
-    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+---
+- hosts: all
+  become: true
+  become_method: sudo
+  tasks:
+
+  - name: Add repository
+    yum_repository:
+      name: epel
+      description: EPEL YUM repo
+      baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
     
-- name: Install a yum package 
-  yum:
-    name: "{{ item }}"
-    state: present
-    with_items:
-    - yum-utils
-    - device-mapper-persistent-data
-    - lvm2
-    - ansible
-    - git
-    - python-devel
-    - python-pip
-    - vim-enhanced
+  - name: Install a yum package 
+    yum:
+      name: "{{ item }}"
+      state: present
+      with_items:
+      - yum-utils
+      - device-mapper-persistent-data
+      - lvm2
+      - ansible
+      - git
+      - python-devel
+      - python-pip
+      - vim-enhanced
 
