@@ -3,4 +3,9 @@
     name: epel
     description: EPEL YUM repo
     baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    
+ - name: Install a yum package 
+    yum:
+      name: yum-utils
+      state: present    
 
