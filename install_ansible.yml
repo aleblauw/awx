@@ -1,15 +1,6 @@
----
-- hosts: all
-  become: true
-  become_method: sudo
-  tasks:
+- name: Add repository
+  yum_repository:
+    name: epel
+    description: EPEL YUM repo
+    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
 
-  - name: add ansible ppa
-    apt_repository:
-      repo: 'ppa:ansible/ansible'
-
-  - name: apt-get update && install ansible
-    apt:
-      update_cache: yes
-      name: ansible
-      state: present
