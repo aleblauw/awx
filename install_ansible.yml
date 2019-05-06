@@ -12,9 +12,9 @@
     
   - name: Install a yum package 
     yum:
-      name: "{{ items }}"
+      name: "{{ item }}"
       state: present
-      with_items:
+    with_items:
       - yum-utils
       - device-mapper-persistent-data
       - lvm2
