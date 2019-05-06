@@ -12,7 +12,7 @@
     
   - name: Install a yum package 
     yum:
-      name: "{{ item }}"
+      name: "{{ items }}"
       state: present
       with_items:
       - yum-utils
