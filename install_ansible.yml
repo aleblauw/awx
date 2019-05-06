@@ -9,11 +9,6 @@
       name: epel
       description: EPEL YUM repo
       baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
-  
-  - name: enable EPEL repository (some .repo file with contents [epel]
-    yum_repo_enabler:
-      name=epel
-      enabled=True
     
   - name: Install a yum package 
     yum:
