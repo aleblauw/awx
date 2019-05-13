@@ -1,6 +1,6 @@
 [vagrant]
-ansible-awx ansible_host=192.168.33.11
-ansible-lab ansible_host=192.168.33.12
+awx ansible_host=192.168.33.11
+lab ansible_host=192.168.33.12
 
 [vagrant:vars]
 ansible_connection=ssh 
