@@ -3,7 +3,7 @@ awx ansible_host=192.168.33.11
 lab ansible_host=192.168.33.12
 
 [windows]
-windows ansible_host=192.168.33.10
+win ansible_host=192.168.33.10
 
 
 [vagrant:vars]
