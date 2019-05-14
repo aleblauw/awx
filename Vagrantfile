@@ -17,7 +17,7 @@ Vagrant.configure('2') do |config|
       host.vm.hostname = "#{short_name}.dev"
     end
   end
-  config.vm.define "windows" do |windows|
+  config.vm.define "win" do |win|
   config.vm.box = "gusztavvargadr/windows-server"
   config.vm.network "private_network", ip: "192.168.33.10"
   config.vm.provider "virtualbox" do |win|
