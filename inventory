@@ -2,7 +2,14 @@
 awx ansible_host=192.168.33.11
 lab ansible_host=192.168.33.12
 
+[windows]
+windows ansible_host=192.168.33.10
+
+
 [vagrant:vars]
 ansible_connection=ssh 
 ansible_ssh_user=vagrant 
 ansible_ssh_pass=vagrant
+
+[windows:vars]
+ansible_connection=winrm
