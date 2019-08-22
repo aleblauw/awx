@@ -13,3 +13,5 @@ ansible_ssh_pass=vagrant
 
 [windows:vars]
 ansible_connection=winrm
+ansible_port = 5986
+ansible_winrm_server_cert_validation: ignore
