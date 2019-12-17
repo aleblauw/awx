@@ -10,9 +10,10 @@ systemctl enable --now docker.service
 pip3 install docker-compose
 git clone https://github.com/ansible/awx.git
 cd awx/installer
-sed -i 's/env python/python3/g' inventory
 sed -i 's/#awx_alternate_dns.*/awx_alternate_dns_servers="8.8.8.8"/g' inventory
 sed -i 's/#project_data_dir=/project_data_dir=/g' inventory
 sed -i 's/#ca_trust_dir=/ca_trust_dir=/g' inventory
+ansible-playbook -i inventory install.yml -vv
+sed -i 's/env python/python3/g' inventory
 ansible-playbook -i inventory install.yml -vv
 docker logs -f awx_task
