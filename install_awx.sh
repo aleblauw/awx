@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo -i
 sed -i 's/nameserver.*/nameserver 8.8.8.8 /g' /etc/resolv.conf
 yum install -y epel-release
