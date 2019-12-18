@@ -13,6 +13,7 @@ vagrant up awx lab
 
 ## Install AWX form bash
 vagrant ssh awx
+
 curl https://raw.githubusercontent.com/aleblauw/awx/master/install_awx.sh | bash 
 
 
