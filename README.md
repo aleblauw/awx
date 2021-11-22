@@ -11,7 +11,7 @@ Download Vagrantfile to the newly created folder https://raw.githubusercontent.c
 
 vagrant up awx lab
 
-## Install AWX form bash
+## Install AWX from bash
 vagrant ssh awx
 
 curl https://raw.githubusercontent.com/aleblauw/awx/master/install_awx.sh | bash 
